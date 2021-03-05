@@ -56,6 +56,8 @@ $ npm login --scope=@OWNER --registry=https://npm.pkg.github.com
 
 ## Usage
 
+It's recommended to use `yarn <command> watch` and `yarn storybook` to automatically compile and test while developing locally.
+
 ```tsx
 import React, { Component } from 'react'
 
