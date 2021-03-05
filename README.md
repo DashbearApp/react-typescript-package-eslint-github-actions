@@ -1,8 +1,8 @@
-# react-ts-package-eslint-github-actions
+# Template: React Typescript Package with Linting, Storybook and Github Actions CI/CD
 
 > React typescript flavored package with ESLint, Prettier configs, Storybook and CI/CD pipelines using Github Actions
 
-[![NPM](https://img.shields.io/npm/v/react-ts-package-eslint-github-actions.svg)](https://www.npmjs.com/package/react-ts-package-eslint-github-actions) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![GPR Node Build Release](https://github.com/DashbearApp/react-ts-package-eslint-github-actions/actions/workflows/actions-gpr-publish-release.yml/badge.svg)](https://github.com/DashbearApp/react-ts-package-eslint-github-actions/actions/workflows/actions-gpr-publish-release.yml) [![Node CI Build Test Yarn](https://github.com/DashbearApp/react-ts-package-eslint-github-actions/actions/workflows/actions-build-test-node.yml/badge.svg)](https://github.com/DashbearApp/react-ts-package-eslint-github-actions/actions/workflows/actions-build-test-node.yml) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 ## Overview
 
