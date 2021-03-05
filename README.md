@@ -121,6 +121,11 @@ For a complete workflow example, refer to [actions-gpr-publish-release.yml](.git
 ```
 
 ## Contributing
+
+Found a bug? Open an issue using the github issues template, be sure to include steps to reproducing and your system information `gh --version, uname -a` etc.
+
+For support related questions, post your question on Github Discussions tab.
+
 ## License
 
-SEE LICENSE IN LICENSE © [dashbearapp](https://github.com/dashbearapp)
+Repository available under MIT license, for more details see [LICENSE](LICENSE) file.
