@@ -34,8 +34,24 @@ Packages are designed for development as **UI components** and contain base them
 
 ## Install
 
+To consume packages published on Github Package Registry (GPR), setup your environment and pull down the release tag with your favorite package manager.
+
 ```bash
-npm install --save react-ts-package-eslint-github-actions
+# npm
+npm install --save <package_name>
+
+# yarn
+yarn add <package_name>
+```
+
+See the example in [.yarnrc](.yarnrc) to point `@namespace` resolver to GPR. Authentication is required for private packages and can be performed using the command:
+
+```bash
+$ npm login --scope=@OWNER --registry=https://npm.pkg.github.com
+
+> Username: USERNAME
+> Password: TOKEN
+> Email: PUBLIC-EMAIL-ADDRESS
 ```
 
 ## Usage
