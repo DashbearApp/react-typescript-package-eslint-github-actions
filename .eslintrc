@@ -3,16 +3,21 @@
   "extends": [
     "standard",
     "standard-react",
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "prettier",
+    "eslint-config-prettier",
     "plugin:prettier/recommended",
-    "prettier/standard",
-    "prettier/react",
+    "plugin:@typescript-eslint/recommended",
     "plugin:@typescript-eslint/eslint-recommended"
   ],
+  "plugins": ["react", "@typescript-eslint"],
   "env": {
     "node": true
   },
   "parserOptions": {
     "ecmaVersion": 2020,
+    "sourceType": "module",
     "ecmaFeatures": {
       "legacyDecorators": true,
       "jsx": true
@@ -20,15 +25,20 @@
   },
   "settings": {
     "react": {
-      "version": "16"
+      "version": "detect"
     }
   },
   "rules": {
+    "@typescript-eslint/interface-name-prefix": "off",
+    "@typescript-eslint/explicit-function-return-type": "off",
     "space-before-function-paren": 0,
     "react/prop-types": 0,
+    "react/react-in-jsx-scope": "off",
     "react/jsx-handler-names": 0,
     "react/jsx-fragments": 0,
     "react/no-unused-prop-types": 0,
-    "import/export": 0
+    "no-use-before-define": "off",
+    "import/export": 0,
+    "no-trailing-spaces": "off"
   }
 }
