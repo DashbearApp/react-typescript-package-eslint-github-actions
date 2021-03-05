@@ -12,7 +12,7 @@ This is a template repository scaffolded using `create-react-library -t typescri
 
 **Local build, run, test** configurations are included for `.vscode` using `launch.json` options for `yarn:start` events.
 
-Packages are designed for development as **UI components** and contain base theme layout support for [@chakra-ui/react](). This behavior can be easily customized in your fork by removing related packages and [theme](theme/) folder.
+Packages are designed for development as **UI components** and contain base theme layout support for [@chakra-ui/react](https://chakra-ui.com/docs/getting-started). This behavior can be easily customized in your fork by removing related packages and [theme](theme/) folder. `GraphQL` flavored resolvers are provided using packages mentioned below and can optionally be removed for other libraries.
 
 * Github Actions
    * Workflow: `Build Test on Node 10x-15x`
@@ -29,6 +29,8 @@ Packages are designed for development as **UI components** and contain base them
 * Packages
    * `Typescript`, `@types/node`, `@types/<package_name>`
    * `@chakra-ui/react` `@chakra-ui/icons` including dependencies, see [docs](https://chakra-ui.com/docs/getting-started)
+   * `formik`, `yup` for client side input forms with validation
+   * `@apollo/client`, `graphql`, `graphql-tag` for client side GraphQL data queries and mutations
    * `storybook` with plugins
    * For more see [package.json](package.json).
 
