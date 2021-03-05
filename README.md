@@ -71,6 +71,56 @@ class Example extends Component {
 }
 ```
 
+## Github Actions
+
+CI/CD workflows are enabled on this repository, see status badges above. Read more about the basics of pipelines on [Github Docs](https://docs.github.com/en/actions).
+
+### Consuming Github Package Registry
+
+Packages published in GPR can be consumed in workflows by mapping the node runtime scope resolver to the Github registry. Note this step requires adding a generated token with scopes `packages:read`, read more on [Github Docs](https://docs.github.com/en/actions/reference/authentication-in-a-workflow). Tokens can be added in the repository settings tab under secrets.
+
+For a complete workflow example, refer to [actions-build-test-node.yml](.github/workflows/actions-build-test-node.yml).
+
+```yml
+    with:
+        node-version: ${{ matrix.node-version }}
+        registry-url: 'https://npm.pkg.github.com/'
+        # Github Username where package is pushed/pulled from
+        scope: '@namespace'
+        always-auth: true
+        # Github Packages:Read token
+        token: ${{ secrets.PACKAGES_TOKEN }}
+    - run: yarn install --frozen-lockfile
+      env:
+        NODE_AUTH_TOKEN: ${{ secrets.PACKAGES_TOKEN }}
+```
+
+### Publishing to Github Package Registry (GPR)
+
+This repository builds and publishes packages using Github Actions workflow instantiated on `[release]` event. Releases can be performed using Github CLI command: `gh release create <tag> [<files>...]`, read more in the [gh cli docs](https://cli.github.com/manual/gh_release_create).
+
+For a complete workflow example, refer to [actions-gpr-publish-release.yml](.github/workflows/actions-gpr-publish-release.yml).
+
+```yml
+  publish-gpr:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+          registry-url: https://npm.pkg.github.com/
+          token: ${{ secrets.PACKAGES_TOKEN }}
+      - run: npm ci
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.PACKAGES_TOKEN}}
+      - run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.PACKAGES_TOKEN}}
+```
+
+## Contributing
 ## License
 
 SEE LICENSE IN LICENSE © [dashbearapp](https://github.com/dashbearapp)
