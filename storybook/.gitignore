@@ -1,0 +1,3 @@
+# GITIGNORE
+.storybook/**/
+node_modules/

@@ -1,0 +1,22 @@
+{
+  "name": "storybook",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "SEE LICENSE IN LICENSE",
+  "dependencies": {
+    "react-ts-package-eslint-github-actions": "link:..",
+    "react-scripts": "^4.0.3"
+  },
+  "devDependencies": {
+    "@storybook/addon-actions": "^6.1.21",
+    "@storybook/addon-essentials": "^6.1.21",
+    "@storybook/addon-links": "^6.1.21",
+    "@storybook/node-logger": "^6.1.21",
+    "@storybook/preset-create-react-app": "^3.1.6",
+    "@storybook/react": "^6.1.21"
+  },
+  "scripts": {
+    "storybook": "start-storybook -h 0.0.0.0 -p 5000",
+    "build-storybook": "build-storybook"
+  }
+}
