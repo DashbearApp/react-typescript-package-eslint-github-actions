@@ -130,4 +130,4 @@ For support related questions, post your question on Github Discussions tab.
 
 ## License
 
-Repository available under MIT license, for more details see [LICENSE](LICENSE) file.
+See [LICENSE](LICENSE) file associated with this repository.
